@@ -18,21 +18,22 @@ public class Quiz1Servlet extends HttpServlet {
     // Handle GET requests
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         QuizManager quizManager = new QuizManager();
-        String question = quizManager.getQuestion(1); // Get the first question
-
-        request.setAttribute("question", question);
+        int numQuizzes = 25; // total number of quiz questions
+        for (int i = 1; i <= numQuizzes; i++) {
+            request.setAttribute("question" + i, quizManager.getQuestion(i));
+        }
         request.getRequestDispatcher("/quiz1.jsp").forward(request, response);
     }
 
     // Handle POST requests
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        int quizIndex = 1; // This is the quiz index for Quiz1Servlet
-        String userAnswer = request.getParameter("answer");
-
         QuizManager quizManager = new QuizManager();
-        String result = quizManager.checkAnswer(quizIndex, userAnswer);
-
-        request.setAttribute("result", result);
+        int numQuizzes = 25; // total number of quiz questions
+        for (int i = 1; i <= numQuizzes; i++) {
+            String userAnswer = request.getParameter("answer" + i);
+            String result = quizManager.checkAnswer(i, userAnswer);
+            request.setAttribute("result" + i, result);
+        }
         request.getRequestDispatcher("/result1.jsp").forward(request, response);
     }
 }
