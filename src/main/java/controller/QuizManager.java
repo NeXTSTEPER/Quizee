@@ -14,7 +14,7 @@ public class QuizManager {
 
     // Create quiz questions-answer pairs
     private void createQuizzes() {
-    	quizzes.put(1, new Quiz("What is the box office collection of 'Terminator 2: Judgment Day'?", "$520.8 million"));
+    	quizzes.put(1, new Quiz("What is the box office collection of 'Terminator 2: Judgment Day'?", "$500 million"));
         quizzes.put(2, new Quiz("What awards did 'Terminator 2: Judgment Day' win?", "Four Academy Awards"));
         quizzes.put(3, new Quiz("During the making of Alien, What did Sir Ridley Scott tell Yaphet Kotto to do to Sigourney Weaver off-camera in the movie 'Alien'?", "Annoy her"));
         quizzes.put(4, new Quiz("In what 1981 movie did Tom Cruise make his film debut?", "Endless Love"));
@@ -36,9 +36,9 @@ public class QuizManager {
         quizzes.put(20, new Quiz("What awards did 'The Terminator' win?", "It won three Saturn Awards including Best Science Fiction Film"));
         quizzes.put(21, new Quiz("Who composed the music for 'The Terminator'?", "Brad Fiedel"));
         quizzes.put(22, new Quiz("What was the budget of 'The Terminator'?", "$6 million"));
-        quizzes.put(23, new Quiz("", ""));
-        quizzes.put(24, new Quiz("What is the runtime of 'The 1'?", "107 minutes"));
-        quizzes.put(25, new Quiz("What is the runtime of 'The Terminator'?", "107 minutes"));
+        quizzes.put(23, new Quiz("What percentage of the fight scenes did Keanu Reeves perform himself in 'John Wick: Chapter 2?", "95"));
+        quizzes.put(24, new Quiz("What happened when Arnold Schwarzenegger went to a restaurant during a break in the filming of 'The Terminator'?", "He forgot that he was still in Terminator makeup - with a missing eye, exposed jawbone, and burned flesh"));
+        quizzes.put(25, new Quiz("What is the unique source of the sounds the Velociraptors make when communicating in 'Jurassic Park'?", "tortoises sex"));
     }
 
     // Get a specific question by index

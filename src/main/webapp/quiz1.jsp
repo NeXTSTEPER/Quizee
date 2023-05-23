@@ -138,9 +138,13 @@
             <input type="text" id="answer23" name="answer23">
             
               <p>Question 24: ${question24}</p>
-            <label for="answer24">Your Answer:</label>
-            <input type="text" id="answer24" name="answer24">
-            
+<label for="answer24">Your Answer:</label>
+<select id="answer24" name="answer24">
+  <option value="He forgot that he was still in Terminator makeup - with a missing eye, exposed jawbone, and burned flesh">He forgot that he was still in Terminator makeup</option>
+  <option value="He forgot he was still naked from the intro scene">He forgot he was still naked from the intro scene</option>
+  <option value="He still had his guns">He still had his weapons from the set</option>
+</select>
+         
               <p>Question 25: ${question25}</p>
             <label for="answer25">Your Answer:</label>
             <input type="text" id="answer25" name="answer25">

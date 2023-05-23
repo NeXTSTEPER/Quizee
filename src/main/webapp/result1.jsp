@@ -51,7 +51,7 @@
     <p><strong>Result for Question 11:</strong> ${result11}</p>
     <p><strong>Result for Question 12:</strong> ${result12}</p>
     <p><strong>Result for Question 13:</strong> ${result13}</p>
-     <p><strong>Result for Question 14:</strong> ${result14}</p>
+    <p><strong>Result for Question 14:</strong> ${result14}</p>
     <p><strong>Result for Question 15:</strong> ${result15}</p>
     <p><strong>Result for Question 16:</strong> ${result16}</p>
     <p><strong>Result for Question 17:</strong> ${result17}</p>
