@@ -1,3 +1,3 @@
 # Quizee
 
-Web based quiz application written in Java
+Web based movie quiz application written in Java
