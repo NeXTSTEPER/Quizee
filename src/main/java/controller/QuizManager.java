@@ -38,7 +38,7 @@ public class QuizManager {
         quizzes.put(22, new Quiz("What was the budget of 'The Terminator'?", "$6 million"));
         quizzes.put(23, new Quiz("What percentage of the fight scenes did Keanu Reeves perform himself in 'John Wick: Chapter 2?", "95"));
         quizzes.put(24, new Quiz("What happened when Arnold Schwarzenegger went to a restaurant during a break in the filming of 'The Terminator'?", "He forgot that he was still in Terminator makeup - with a missing eye, exposed jawbone, and burned flesh"));
-        quizzes.put(25, new Quiz("What is the unique source of the sounds the Velociraptors make when communicating in 'Jurassic Park'?", "tortoises sex"));
+        quizzes.put(25, new Quiz("What is the unique source of the sounds the Velociraptors make when communicating in 'Jurassic Park'?", "tortoise sex"));
     }
 
     // Get a specific question by index
