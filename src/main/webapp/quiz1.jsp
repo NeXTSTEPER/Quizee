@@ -57,7 +57,7 @@
       <form action="Quiz1Servlet" method="POST">
          <p>Question 1: ${question1}</p>
          <label for="answer1">Your Answer:</label>
-         <select id="answer2" name="answer2">
+         <select id="answer1" name="answer1">
             <option>Choose one of the following:</option>
             <option value="$450 million">$450 million</option>
             <option value="$500 million">$500 million</option>
