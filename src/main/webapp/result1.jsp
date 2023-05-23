@@ -18,6 +18,13 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
+        
+        h1 {
+    font-size: 2.5em;
+    padding: 10px 20px;
+    color: #343a40;
+    text-shadow: 2px 2px 4px #868e96;
+}
         p {
             padding: 20px;
         }
@@ -38,6 +45,8 @@
     </style>
 </head>
 <body>
+<h1>Your score: <%= request.getAttribute("percentageScore") %> %</h1>
+
     <p><strong>Result for Question 1:</strong> ${result1}</p>
     <p><strong>Result for Question 2:</strong> ${result2}</p>
     <p><strong>Result for Question 3:</strong> ${result3}</p>

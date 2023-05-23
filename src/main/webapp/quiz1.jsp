@@ -110,7 +110,12 @@
          <input type="text" id="answer21" name="answer21">
          <p>Question 22: ${question22}</p>
          <label for="answer22">Your Answer:</label>
-         <input type="text" id="answer22" name="answer22">
+          <select id="answer22" name="answer22">
+         	<option>Choose one of the following:</option>
+            <option value="$25 million">$25 million</option>
+            <option value="$6 million">$6 million</option>
+            <option value="$15 million">$15 million</option>
+         </select>
          <p>Question 23: ${question23}</p>
          <label for="answer23">Your Answer:</label>
          <input type="text" id="answer23" name="answer23">
