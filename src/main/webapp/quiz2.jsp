@@ -52,6 +52,7 @@
       </style>
    </head>
     <body>
+          <h1 class="title">Quizee - Movie Title Scrambler</h1>
       <form method="post" action="Quiz2Servlet">
             <p>Quiz 2: <%= request.getAttribute("question") %></p>
             <label for="answer">Your Answer:</label>

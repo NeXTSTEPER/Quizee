@@ -16,16 +16,21 @@ import java.util.Map;
 import java.util.Random;
 
 public class QuizManager {
+    // A map to store quiz questions and answers with an integer key
     private Map<Integer, Quiz> quizzes;
 
+    // Constructor to initialize the map and create quiz questions
     public QuizManager() {
-    	//To store the quiz questions
         quizzes = new HashMap<>();
         createQuizzes();
     }
 
-    // Create quiz questions-answer pairs
+
+ // Method to create quiz questions and answers and store them in the map
     private void createQuizzes() {
+        // Add quiz questions and answers to the map
+        // Key is an integer, value is a Quiz object containing question and answer
+        // Add more quiz questions and answers as needed
     	quizzes.put(1, new Quiz("What is the box office collection of 'Terminator 2: Judgment Day'?", "$500 million"));
         quizzes.put(2, new Quiz("What awards did 'Terminator 2: Judgment Day' win?", "Four Academy Awards"));
         quizzes.put(3, new Quiz("During the making of Alien, What did Sir Ridley Scott tell Yaphet Kotto to do to Sigourney Weaver off-camera in the movie 'Alien'?", "Annoy her"));
@@ -82,26 +87,65 @@ public class QuizManager {
         
     }
     
+    // A list of movie titles for use in the scrambler quiz
     static final List<String> MOVIE_TITLES = Arrays.asList(
-            "The Terminator",
-            "Star Wars",
-            "The Godfather",
-            "The Dark Knight"
-            // Add more movie titles...
-        );
-    
+    	    "The Terminator",
+    	    "Star Wars",
+    	    "The Godfather",
+    	    "The Dark Knight",
+    	    "Inception",
+    	    "The Good, the Bad and the Ugly",
+    	    "Psycho",
+    	    "Apocalypse Now",
+    	    "Blade Runner",
+    	    "Pulp Fiction",
+    	    "The Exorcist",
+    	    "Jurassic Park",
+    	    "A Clockwork Orange",
+    	    "Rosemary's Baby",
+    	    "Eternal Sunshine of the Spotless Mind",
+    	    "Schindler's List",
+    	    "Raiders of the Lost Ark",
+    	    "The Lion King",
+    	    "A Nightmare on Elm Street",
+    	    "The Matrix",
+    	    "Fargo",
+    	    "The Shawshank Redemption",
+    	    "Alien",
+    	    "The Departed",
+    	    "There Will Be Blood",
+    	    "The Silence of the Lambs",
+    	    "Star Trek",
+    	    "The Social Network",
+    	    "Fast X",
+    	    "Guardians of the Galaxy Vol. 3",
+    	    "The Super Mario Bros. Movie",
+    	    "Book Club: The Next Chapter",
+    	    "Evil Dead Rise",
+    	    "John Wick: Chapter 4",
+    	    "Are You There God? It's Me, Margaret.",
+    	    "Hypnotic",
+    	    "Love Again",
+    	    "The Iron Giant",
+    	    "Dungeons & Dragons: Honor Among Thieves"
+    	    // Add more movie titles...
+    	);
+
+    // Method to get a movie title by index
     public String getMovieTitle(int index) {
         if (index < 0 || index >= MOVIE_TITLES.size()) {
             throw new IllegalArgumentException("Invalid movie title index");
         }
         return MOVIE_TITLES.get(index);
     }
-
+    
+    // Method to get a random movie title from the list
     public String getRandomMovieTitle() {
         int index = new Random().nextInt(MOVIE_TITLES.size());
         return getMovieTitle(index);
     }
-
+    
+    // Method to shuffle the characters in a string (e.g., for creating anagrams)
     public String shuffle(String input) {
         String[] words = input.split(" ");
         StringBuilder output = new StringBuilder(input.length());
