@@ -112,7 +112,12 @@
          </select>
          <p>Question 13: ${question13}</p>
          <label for="answer13">Your Answer:</label>
-         <input type="text" id="answer13" name="answer13">
+        <select id="answer13" name="answer13">
+            <option>Choose one of the following:</option>
+            <option value="Alec Guinness (Obi Wan Kenobi)">Alec Guinness (Obi Wan Kenobi)</option>
+            <option value="Mark Hamill">Mark Hamill (Luke Skywalker)</option>
+            <option value="Peter Cushing">Peter Cushing (Grand Moff Tarkin)</option>
+         </select>
          <p>Question 14: ${question14}</p>
          <label for="answer14">Your Answer:</label>
          <select id="answer14" name="answer14">

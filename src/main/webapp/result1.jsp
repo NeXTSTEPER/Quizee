@@ -75,6 +75,6 @@
     <p><strong>Result for Question 23:</strong> ${result23}</p>
     <p><strong>Result for Question 24:</strong> ${result24}</p>
     <p><strong>Result for Question 25:</strong> ${result25}</p>
-    <a href="Quiz1Servlet">Reset Quiz</a>
+    <a href="Quiz2Servlet">Quiz 2</a>
 </body>
 </html>

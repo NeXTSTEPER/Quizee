@@ -21,20 +21,35 @@ public class Quiz2Servlet extends HttpServlet {
     // Handle GET requests
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         QuizManager quizManager = new QuizManager();
-        String question = quizManager.getQuestion(2); // Get the second question
-        request.setAttribute("question", question);
+        String movieTitle = quizManager.getRandomMovieTitle(); // Get a random movie title
+        String shuffledMovieTitle = quizManager.shuffle(movieTitle);
+
+        // Store the original movie title in the session.
+        request.getSession().setAttribute("originalTitle", movieTitle);
+
+        request.setAttribute("question", shuffledMovieTitle);
         request.getRequestDispatcher("quiz2.jsp").forward(request, response);
     }
 
     // Handle POST requests
+ // Handle POST requests
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        int quizIndex = 2; // This is the quiz index for Quiz2Servlet
         String userAnswer = request.getParameter("answer");
 
+        // Retrieve the original (unscrambled) movie title from the session.
+        String originalTitle = (String) request.getSession().getAttribute("originalTitle");
+
         QuizManager quizManager = new QuizManager();
-        String result = quizManager.checkAnswer(quizIndex, userAnswer);
+        String result;
+        if (quizManager.MOVIE_TITLES.contains(userAnswer)) {
+            result = "Correct!";
+        } else {
+            result = "Wrong answer. The correct answer was: " + originalTitle;
+        }
 
         request.setAttribute("result", result);
         request.getRequestDispatcher("result2.jsp").forward(request, response);
     }
+
+
 }

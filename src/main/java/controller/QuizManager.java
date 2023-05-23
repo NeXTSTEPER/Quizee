@@ -7,8 +7,13 @@
 
 package controller;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.Random;
 
 public class QuizManager {
     private Map<Integer, Quiz> quizzes;
@@ -31,7 +36,7 @@ public class QuizManager {
         quizzes.put(8, new Quiz("In what movie did actor Tom Hanks make his directorial debut?", "That Thing You Do"));
         quizzes.put(9, new Quiz("What 1980s TV show did actor Tom Hanks star as Buffy Wilson?", "Bosom Buddies"));
         quizzes.put(10, new Quiz("In what 1988 movie did Tom Hanks play a young teen who wakes up a grown man after making a wish on a fortune-telling machine?", "Big"));
-        quizzes.put(11, new Quiz("After “Big,” Tom Hanks and Penny Marshall teamed up for which popular baseball movie?", "A League of Their Own"));
+        quizzes.put(11, new Quiz("After 'Big' Tom Hanks and Penny Marshall teamed up for which popular baseball movie?", "A League of Their Own"));
         quizzes.put(12, new Quiz("Did Ian McDiarmid appear as the Emperor in the original 1980 release of the 'Empire Strikes Back' ?", "No in the original release the Emperor was portrayed by Marjorie Eaton and voiced by Clive Revill"));
         quizzes.put(13, new Quiz("Which actor was nominated for best supporting actor at the Oscars for his role in Star Wars?", "Alec Guinness (Obi Wan Kenobi)"));
         quizzes.put(14, new Quiz("Before he worked on movies like The Terminator what did James Cameron do?", "Truck Driver"));
@@ -73,5 +78,45 @@ public class QuizManager {
         } else {
             return "Incorrect. The correct answer is " + correctAnswer;
         }
+        
+        
     }
+    
+    static final List<String> MOVIE_TITLES = Arrays.asList(
+            "The Terminator",
+            "Star Wars",
+            "The Godfather",
+            "The Dark Knight"
+            // Add more movie titles...
+        );
+    
+    public String getMovieTitle(int index) {
+        if (index < 0 || index >= MOVIE_TITLES.size()) {
+            throw new IllegalArgumentException("Invalid movie title index");
+        }
+        return MOVIE_TITLES.get(index);
+    }
+
+    public String getRandomMovieTitle() {
+        int index = new Random().nextInt(MOVIE_TITLES.size());
+        return getMovieTitle(index);
+    }
+
+    public String shuffle(String input) {
+        String[] words = input.split(" ");
+        StringBuilder output = new StringBuilder(input.length());
+        for (String word : words) {
+            List<Character> characters = new ArrayList<Character>();
+            for (char c : word.toCharArray()) {
+                characters.add(c);
+            }
+            Collections.shuffle(characters);
+            for (char c : characters) {
+                output.append(c);
+            }
+            output.append(' '); // Add space after each shuffled word
+        }
+        return output.toString().trim(); // Remove trailing space
+    }
+
 }
