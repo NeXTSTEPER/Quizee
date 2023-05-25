@@ -1,3 +1,13 @@
+/**
+ * @author - Alex Cox
+ * CIS175 - Spring 2023
+
+// This servlet handles quiz-related HTTP requests in a Java web application. 
+// It provides GET and POST request handling for a quiz which contains 25 questions.
+// For GET requests, it retrieves and sends the quiz questions to the client. 
+// For POST requests, it validates the answers submitted by the user and calculates the user's score.
+ */
+
 package controller;
 
 import java.io.IOException;

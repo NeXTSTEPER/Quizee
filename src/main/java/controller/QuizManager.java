@@ -2,8 +2,13 @@
  * @author - Alex Cox
  * CIS175 - Spring 2023
  * 
+ * The QuizManager class is responsible for managing a collection of quizzes. 
+ * Each quiz is represented as a Quiz object and stored in a HashMap with an integer key. 
+ * The class provides methods to create quizzes, get a specific question or answer by index, 
+ * get all quizzes, check a user's answer for a given quiz, and scramble movie titles for a special type of quiz.
+ * 
+ * The class also contains a list of movie titles for use in the scrambler quiz.
  */
-
 
 package controller;
 

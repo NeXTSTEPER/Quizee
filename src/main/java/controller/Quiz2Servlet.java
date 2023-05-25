@@ -1,3 +1,13 @@
+/**
+ * @author - Alex Cox
+ * CIS175 - Spring 2023
+
+// This servlet is responsible for handling quiz-related HTTP requests in a Java web application. 
+// The quiz involves a shuffled movie title, and the user must guess the original title.
+// For GET requests, it retrieves a random movie title, shuffles it, and sends it to the client. 
+// For POST requests, it verifies the answer provided by the user and calculates the user's score.
+ */
+
 package controller;
 
 import java.io.IOException;
